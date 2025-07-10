@@ -1,0 +1,68 @@
+[
+  {
+    "Id": 1,
+    "title": "Complete project proposal",
+    "description": "Finalize the project proposal document with timeline and budget estimates",
+    "status": "in-progress",
+    "priority": "high",
+    "dueDate": "2024-01-15",
+    "folderId": 1,
+    "createdAt": "2024-01-01T10:00:00Z",
+    "updatedAt": "2024-01-03T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "title": "Review design mockups",
+    "description": "Go through the latest design mockups and provide feedback to the design team",
+    "status": "todo",
+    "priority": "medium",
+    "dueDate": "2024-01-12",
+    "folderId": 1,
+    "createdAt": "2024-01-02T09:15:00Z",
+    "updatedAt": "2024-01-02T09:15:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "Buy groceries",
+    "description": "Milk, bread, eggs, fruits, and vegetables for the week",
+    "status": "completed",
+    "priority": "low",
+    "dueDate": "2024-01-10",
+    "folderId": 2,
+    "createdAt": "2024-01-08T18:00:00Z",
+    "updatedAt": "2024-01-10T16:45:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "Schedule dentist appointment",
+    "description": "Regular checkup and cleaning appointment",
+    "status": "todo",
+    "priority": "medium",
+    "dueDate": "2024-01-20",
+    "folderId": 2,
+    "createdAt": "2024-01-05T12:00:00Z",
+    "updatedAt": "2024-01-05T12:00:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "Plan weekend trip",
+    "description": "Research destinations and book accommodations for the weekend getaway",
+    "status": "todo",
+    "priority": "low",
+    "dueDate": "2024-01-14",
+    "folderId": 2,
+    "createdAt": "2024-01-06T20:30:00Z",
+    "updatedAt": "2024-01-06T20:30:00Z"
+  },
+  {
+    "Id": 6,
+    "title": "Update portfolio website",
+    "description": "Add latest projects and update the design with new branding",
+    "status": "in-progress",
+    "priority": "high",
+    "dueDate": "2024-01-18",
+    "folderId": 1,
+    "createdAt": "2024-01-04T11:20:00Z",
+    "updatedAt": "2024-01-07T15:10:00Z"
+  }
+]

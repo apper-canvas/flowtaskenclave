@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "title": "Meeting Notes - Project Kickoff",
+    "content": "Key discussion points from today's project kickoff meeting:\n\n• Timeline: 12 weeks total\n• Budget: $50,000\n• Team: 5 developers, 2 designers\n• Milestones: Design phase (2 weeks), Development (8 weeks), Testing (2 weeks)\n• Next meeting: January 15th\n\nAction items:\n- Finalize requirements document\n- Set up project repository\n- Schedule design review sessions",
+    "folderId": 1,
+    "createdAt": "2024-01-01T14:00:00Z",
+    "updatedAt": "2024-01-01T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "title": "Recipe Ideas",
+    "content": "Collection of recipe ideas to try this month:\n\n**Dinner Ideas:**\n• Honey garlic salmon with roasted vegetables\n• Chicken tikka masala with basmati rice\n• Vegetarian lasagna with spinach and ricotta\n• Thai green curry with jasmine rice\n\n**Quick Meals:**\n• Avocado toast with poached egg\n• Caprese salad with fresh mozzarella\n• Quinoa bowl with roasted chickpeas\n\n**Desserts:**\n• Chocolate chip cookies\n• Lemon bars\n• Fruit tart",
+    "folderId": 2,
+    "createdAt": "2024-01-02T19:45:00Z",
+    "updatedAt": "2024-01-06T21:15:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "Book Recommendations",
+    "content": "Great books I want to read this year:\n\n**Fiction:**\n• \"The Seven Husbands of Evelyn Hugo\" by Taylor Jenkins Reid\n• \"Where the Crawdads Sing\" by Delia Owens\n• \"The Midnight Library\" by Matt Haig\n\n**Non-Fiction:**\n• \"Atomic Habits\" by James Clear\n• \"Educated\" by Tara Westover\n• \"Sapiens\" by Yuval Noah Harari\n\n**Currently Reading:**\n• \"The Power of Now\" by Eckhart Tolle\n\nNotes: Focus on one book at a time, aim for 2 books per month",
+    "folderId": 2,
+    "createdAt": "2024-01-03T16:20:00Z",
+    "updatedAt": "2024-01-05T20:10:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "React Best Practices",
+    "content": "Important React patterns and best practices to remember:\n\n**Component Structure:**\n• Use functional components with hooks\n• Keep components small and focused\n• Use proper prop types or TypeScript\n• Implement proper error boundaries\n\n**State Management:**\n• Use useState for local state\n• Consider useReducer for complex state\n• Context API for global state\n• Redux for large applications\n\n**Performance:**\n• Use React.memo for expensive renders\n• Implement proper key props in lists\n• Lazy load components when possible\n• Optimize bundle size with code splitting\n\n**Testing:**\n• Write unit tests for components\n• Integration tests for user flows\n• Use React Testing Library",
+    "folderId": 3,
+    "createdAt": "2024-01-04T10:30:00Z",
+    "updatedAt": "2024-01-07T11:45:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "Fitness Goals 2024",
+    "content": "My fitness goals and workout plan for this year:\n\n**Goals:**\n• Lose 15 pounds\n• Run a 5K in under 25 minutes\n• Increase strength by 20%\n• Improve flexibility and mobility\n\n**Weekly Schedule:**\n• Monday: Upper body strength training\n• Tuesday: 30-minute run\n• Wednesday: Yoga or stretching\n• Thursday: Lower body strength training\n• Friday: Rest or light walk\n• Saturday: Long run or hiking\n• Sunday: Active recovery\n\n**Nutrition:**\n• Drink 8 glasses of water daily\n• Eat 5 servings of fruits and vegetables\n• Limit processed foods\n• Meal prep on Sundays\n\n**Progress Tracking:**\n• Weigh in weekly\n• Track workouts in app\n• Take progress photos monthly",
+    "folderId": 2,
+    "createdAt": "2024-01-01T08:00:00Z",
+    "updatedAt": "2024-01-08T07:30:00Z"
+  }
+]
