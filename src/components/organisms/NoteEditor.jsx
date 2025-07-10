@@ -7,29 +7,45 @@ import Input from "@/components/atoms/Input";
 import Textarea from "@/components/atoms/Textarea";
 import Select from "@/components/atoms/Select";
 import FormField from "@/components/molecules/FormField";
+import PrioritySelector from "@/components/molecules/PrioritySelector";
+import StatusSelector from "@/components/molecules/StatusSelector";
+import DatePicker from "@/components/molecules/DatePicker";
 
 const NoteEditor = ({ isOpen, onClose, note, onUpdate, folders = [] }) => {
   const [formData, setFormData] = useState({
     title: "",
     content: "",
+    description: "",
+    priority: "medium",
+    status: "todo",
+    dueDate: "",
     folderId: "",
   });
   
-  useEffect(() => {
+useEffect(() => {
     if (note) {
       setFormData({
         title: note.title || "",
         content: note.content || "",
+        description: note.description || "",
+        priority: note.priority || "medium",
+        status: note.status || "todo",
+        dueDate: note.dueDate || "",
         folderId: note.folderId || "",
       });
     }
   }, [note]);
   
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     
     if (!formData.title.trim()) {
       toast.error("Title is required");
+      return;
+    }
+    
+    if (!formData.description.trim()) {
+      toast.error("Description is required");
       return;
     }
     
@@ -47,7 +63,7 @@ const NoteEditor = ({ isOpen, onClose, note, onUpdate, folders = [] }) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
   
-  if (!note) return null;
+const isEditing = !!note;
   
   return (
     <AnimatePresence>
@@ -67,8 +83,10 @@ const NoteEditor = ({ isOpen, onClose, note, onUpdate, folders = [] }) => {
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             className="bg-white rounded-16 p-6 w-full max-w-2xl shadow-xl relative max-h-[90vh] overflow-y-auto"
           >
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold text-gray-900">Edit Note</h2>
+<div className="flex items-center justify-between mb-6">
+              <h2 className="text-xl font-semibold text-gray-900">
+                {isEditing ? "Edit Note" : "Create Note"}
+              </h2>
               <button
                 onClick={onClose}
                 className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
@@ -85,17 +103,47 @@ const NoteEditor = ({ isOpen, onClose, note, onUpdate, folders = [] }) => {
                   onChange={(e) => handleChange("title", e.target.value)}
                 />
               </FormField>
+<FormField label="Description" required>
+                <Textarea
+                  placeholder="Enter note description..."
+                  value={formData.description}
+                  onChange={(e) => handleChange("description", e.target.value)}
+                  rows={3}
+                />
+              </FormField>
               
               <FormField label="Content">
                 <Textarea
                   placeholder="Start writing your note..."
                   value={formData.content}
                   onChange={(e) => handleChange("content", e.target.value)}
-                  rows={12}
+                  rows={8}
                   className="content-editor"
                 />
               </FormField>
               
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField label="Priority">
+                  <PrioritySelector
+                    value={formData.priority}
+                    onChange={(value) => handleChange("priority", value)}
+                  />
+                </FormField>
+                
+                <FormField label="Status">
+                  <StatusSelector
+                    value={formData.status}
+                    onChange={(value) => handleChange("status", value)}
+                  />
+                </FormField>
+              </div>
+              
+              <FormField label="Due Date">
+                <DatePicker
+                  value={formData.dueDate}
+                  onChange={(value) => handleChange("dueDate", value)}
+                />
+              </FormField>
               {folders.length > 0 && (
                 <FormField label="Folder">
                   <Select
@@ -116,8 +164,8 @@ const NoteEditor = ({ isOpen, onClose, note, onUpdate, folders = [] }) => {
                 <Button type="button" variant="outline" onClick={onClose} className="flex-1">
                   Cancel
                 </Button>
-                <Button type="submit" className="flex-1">
-                  Update Note
+<Button type="submit" className="flex-1">
+                  {isEditing ? "Update Note" : "Create Note"}
                 </Button>
               </div>
             </form>
