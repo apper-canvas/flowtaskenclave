@@ -113,11 +113,6 @@ const handleUserDropdownClick = () => {
                     className="absolute right-0 mt-2 w-48 bg-white rounded-12 shadow-card-hover border border-gray-200 z-50"
 >
                     <div className="py-2">
-                      <div className="px-4 py-2 border-b border-gray-100">
-                        <div className="text-sm text-gray-500">
-                          {user?.emailAddress || 'user@example.com'}
-                        </div>
-                      </div>
                       <button
                         onClick={handleLogout}
                         className="w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors duration-200"
