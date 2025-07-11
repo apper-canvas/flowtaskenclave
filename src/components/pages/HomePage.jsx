@@ -133,19 +133,14 @@ const HomePage = ({ folders = [], onQuickAdd }) => {
   
   return (
     <div className="space-y-8">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900">
-            Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 17 ? "afternoon" : "evening"}!
-          </h1>
-          <p className="text-gray-600 mt-1">
-            {format(new Date(), "EEEE, MMMM d, yyyy")}
-          </p>
-        </div>
-        <Button onClick={onQuickAdd} icon="Plus" className="shadow-fab">
-          Quick Add
-        </Button>
+{/* Header */}
+      <div>
+        <h1 className="text-3xl font-bold text-gray-900">
+          Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 17 ? "afternoon" : "evening"}!
+        </h1>
+        <p className="text-gray-600 mt-1">
+          {format(new Date(), "EEEE, MMMM d, yyyy")}
+        </p>
       </div>
       
       {/* Stats */}
@@ -210,7 +205,7 @@ const HomePage = ({ folders = [], onQuickAdd }) => {
           )}
         </div>
         
-        <ItemGrid
+<ItemGrid
           items={recentItems}
           folders={folders}
           onTaskUpdate={handleTaskUpdate}
@@ -221,7 +216,6 @@ const HomePage = ({ folders = [], onQuickAdd }) => {
           emptyIcon="Home"
           emptyTitle="Welcome to FlowTask!"
           emptyDescription="Start organizing your tasks and notes in one place. Create your first item to get started."
-          onQuickAdd={onQuickAdd}
         />
       </div>
       
